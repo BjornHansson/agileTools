@@ -1,0 +1,11 @@
+<div ng-controller="retrospectivePostFeedbackController">
+  <div ng-bind-html="alert"></div>
+  <div class="input-group input-group-lg lead">
+    <span class="input-group-addon">$</span>
+    <input type="text" class="form-control" placeholder="Your feedback" aria-describedby="sizing-addon1" ng-model="feedbackInput" required />
+  </div>
+  <p class="lead">
+    <button class="btn btn-lg btn-success" ng-click="submitFeedback(1)"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Good</button>
+    <button class="btn btn-lg btn-danger" ng-click="submitFeedback(0)"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> Bad</button>
+  </p>
+</div>

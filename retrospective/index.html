@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="retrospectiveApp">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- The above 2 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular-resource.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular-route.min.js"></script>
+  <script src="src/retrospectiveApp.js"></script>
+  <link rel="icon" href="img/favicon.ico" />
+  <title>Retrospective</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/mainStyle.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <div class="cover-container">
+        <div class="masthead clearfix">
+          <div class="inner">
+            <h3 class="masthead-brand">Retrospective</h3>
+            <nav>
+              <ul class="nav masthead-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="inner cover">
+          <div ng-view></div>
+        </div>
+        <div class="mastfoot">
+          <div class="inner">
+            <p><a href="http://getbootstrap.com">Bootstrap</a> | <a href="https://angularjs.org">AngularJS</a> | <a href="https://nodejs.org">Node.js</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
