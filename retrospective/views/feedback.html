@@ -1,24 +1,13 @@
-<div ng-controller="retrospectiveGetFeedbackController">
-  <!--<table class="table table-striped table-bordered" style="background:#fff">
+<div>
+  <h3>Latest 10</h3>
+  <table class="table table-striped table-bordered" style="background:#fff">
     <thead>
       <tr>
-        <th>ID</th>
+        <th>Mood</th>
         <th>Comment</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus placerat, nunc sed posuere aliquam</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus placerat, nunc sed posuere aliquam</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus placerat, nunc sed posuere aliquam</td>
-      </tr>
+    <tbody ng-bind-html="feedbackTable">
     </tbody>
-  </table>-->
+  </table>
 </div>

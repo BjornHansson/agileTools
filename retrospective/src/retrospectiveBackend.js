@@ -1,13 +1,14 @@
-var app = require('http').createServer(handler);
-var mysql = require('mysql');
+var app = require('http').createServer(handler),
+mysql = require('mysql');
+config = require('./retrospectiveConfig.js');
 
-app.listen(8585);
+app.listen(config.getBackendPort());
 
 var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'agile'
+  host: config.getDatabaseHost(),
+  user: config.getDatabaseUser(),
+  password: config.getDatabasePassword(),
+  database: config.getDatabaseName()
 });
 connection.connect(function(error) {
   if (error) {
@@ -31,7 +32,7 @@ function handler(request, response) {
       });
       response.end();
     } else if (request.method === 'GET') {
-      connection.query('SELECT * FROM retrospective;', function(error, rows, fields) {
+      connection.query('SELECT * FROM retrospective ORDER BY date DESC LIMIT 10;', function(error, rows, fields) {
         if (error) {
           response.writeHead(500, {
             'Access-Control-Allow-Origin': '*'
