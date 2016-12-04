@@ -58,6 +58,7 @@ function handler(request, response) {
               'Access-Control-Allow-Origin': '*'
             });
             response.end(JSON.stringify(error));
+            console.log(error);
           } else {
             response.writeHead(201, {
               'Access-Control-Allow-Origin': '*'
