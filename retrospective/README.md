@@ -1,5 +1,5 @@
 # Retrospective
-Tool to track feedback that is then used in retrospective.
+Tool to track feedback to be used in retrospective.
 
 ![Screenshot](img/screenshot.jpg?raw=true "Screenshot")
 
