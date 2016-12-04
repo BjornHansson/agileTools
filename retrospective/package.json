@@ -1,0 +1,14 @@
+{
+  "name": "retrospective",
+  "version": "1.0.0",
+  "description": "Tool to track feedback",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Björn Hansson",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "~2.12.0"
+  }
+}
